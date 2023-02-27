@@ -76,3 +76,25 @@
     background-color: var(--primary-color) !important;
     color: var(--secondary-color) !important;
 }
+
+.tags{
+    margin-bottom:-5px
+}
+.tags a,.tags .tag{
+    display:inline-block;
+    border:1px solid rgba(197, 195, 195, 0.8);
+    border-radius:999em;
+    padding:0 10px;
+    color:#b7b7b7;
+    line-height:24px;
+    font-size:14px;
+    text-decoration:none;
+    margin:0 1px;
+    margin-bottom:6px
+}
+.tags a:hover,.tags .tag:hover,.tags a:active,.tags .tag:active{
+    color:#7d99c3;
+    border-color:#6e87c1;
+    background-color:rgba(255,255,255,.4);
+    text-decoration:none
+}
