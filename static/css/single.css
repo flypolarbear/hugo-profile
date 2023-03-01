@@ -1,6 +1,7 @@
 #single {
     padding: 60px 0;
-    line-height: 1.7em;
+    line-height: 1.8em;
+    font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
     font-size: 17px;
 }
 
@@ -31,6 +32,13 @@
     color: var(--primary-color) !important;
 }
 
+#single .page-content img {
+    display: inline-block;
+    padding: 0 3%;
+    width: 100%;
+}
+
+
 #single .page-content a::after {
     content: "";
     display: block;
@@ -54,10 +62,11 @@
 
 #single .page-content blockquote {
     padding: 20px 30px;
-    border-left: 6px solid var(--primary-color) !important;
+    border-left: 6px solid #747d85 !important;
     color: var(--text-secondary-color) !important;
     font-weight: 600;
-    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
     margin: 30px 0;
     border-radius: 5px;
 }
