@@ -18,9 +18,35 @@
     }
 </script>
 
+<!-- Show header on scroll up -->
+{{ if .Site.Params.navbar.stickyNavBar.enable | default false }}
+{{ $showNavBarOnScrollUp := .Site.Params.navbar.stickyNavBar.showOnScrollUp | default false }}
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp = {{ $showNavBarOnScrollUp }};
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;        
+    });
+</script>
+{{ end }}
 
 <!-- Navbar -->
-<header>
+<header id="profileHeader">
     <nav class="pt-3 navbar navbar-expand-lg {{ if .Site.Params.animate }}animate{{ end }}">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             <!-- navbar brand -->
@@ -36,7 +62,7 @@
 
             {{ if not (.Site.Params.navbar.disableSearch | default false) }}
                 <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder="Ctrl + k"
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + k to Search..."}}'
                         aria-label="Search" oninput="searchOnChange(event)">
                 </div>
             {{ end }}
@@ -55,7 +81,7 @@
                     {{ if not (.Site.Params.navbar.disableSearch | default false) }}
                         <li class="nav-item navbar-text d-block d-md-none">
                             <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder="Ctrl + k" aria-label="Search" oninput="searchOnChange(event)">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + k to Search..."}}' aria-label="Search" oninput="searchOnChange(event)">
                             </div>
                         </li>
                     {{ end }}
