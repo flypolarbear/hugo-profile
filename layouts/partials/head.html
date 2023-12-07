@@ -53,6 +53,7 @@
         --secondary-background-color: {{ .Site.Params.color.secondaryBackgroundColor | default "#64ffda1a" }};
         --primary-color: {{ .Site.Params.color.primaryColor | default "#007bff" }};
         --secondary-color: {{ .Site.Params.color.secondaryColor | default "#f8f9fa" }};
+        --selection-color: {{ .Site.Params.color.selectionColor | default "#96bbd3" }};
 
         /* dark mode colors */
         --text-color-dark: {{ .Site.Params.color.darkmode.textColor | default "#e4e6eb" }};
@@ -60,7 +61,8 @@
         --background-color-dark: {{ .Site.Params.color.darkmode.backgroundColor | default "#18191a" }};
         --secondary-background-color-dark: {{ .Site.Params.color.darkmode.secondaryBackgroundColor | default "#212529" }};
         --primary-color-dark: {{ .Site.Params.color.darkmode.primaryColor | default "#ffffff" }};
-        --secondary-color-dark: {{ .Site.Params.color.darkmode.secondaryColor | default "#212529" }};
+        --secondary-color-dark: {{ .Site.Params.color.darkmode.secondaryColor | default "#252a2e" }};
+        --selection-color-dark: {{ .Site.Params.color.darkmode.selectionColor | default "#5D6D7E" }};
     }
     body {
         font-size: {{ .Site.Params.font.fontSize | default "1rem" }};

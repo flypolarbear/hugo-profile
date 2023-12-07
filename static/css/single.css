@@ -2,7 +2,7 @@
     padding: 60px 0;
     line-height: 1.8em;
     font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 #single .title > h1 {
@@ -29,6 +29,11 @@
 #single .page-content img {
     max-width: 100%;
     border-radius: 1rem;
+    display: inline-block;
+}
+
+#single .page-content img:hover {
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 #single .page-content a {
@@ -36,13 +41,6 @@
     text-decoration: none;
     color: var(--primary-color) !important;
 }
-
-#single .page-content img {
-    display: inline-block;
-    padding: 0 3%;
-    width: 100%;
-}
-
 
 #single .page-content a::after {
     content: "";
