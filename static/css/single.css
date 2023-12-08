@@ -2,7 +2,7 @@
     padding: 60px 0;
     line-height: 1.8em;
     font-family: system-ui,-apple-system,BlinkMacSystemFont,PingFang SC,Microsoft YaHei UI,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 #single .title > h1 {
@@ -60,6 +60,7 @@
 #single .page-content h1, #single .page-content h2, #single .page-content h3, #single .page-content h4, #single .page-content h5, #single .page-content h6 {
     color: var(--primary-color) !important;
     margin-bottom: 0.7em;
+    margin-top: 1.5em;
     opacity: 0.9;
 }
 
@@ -216,7 +217,7 @@
 }
 
 #single aside.toc .toc-content ol li a, #single aside.toc .toc-content ul li a {
-    font-size: 16px;
+    font-size: 13px;
     text-decoration: none;
     color: var(--text-color);
     opacity: 0.9;

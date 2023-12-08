@@ -21,6 +21,8 @@
 }
 
 #list-page .card-text * {
+    font-size: 1rem;
+    color: var(--text-secondary-color) !important;
     background-color: var(--secondary-color) !important;
 }
 
@@ -57,6 +59,37 @@
     width: 100%;
     height: 250px !important;
     background-color: transparent !important;
+}
+
+#list-page .card-title {
+    margin-bottom: 20px;
+}
+
+#list-page .card > .card-body-post {
+    display: flex;
+    flex-direction: row;
+}
+
+#list-page .card-body-post > .card-body-left {
+    width: 30%;
+    padding: 0 !important;
+    border: none !important;
+    background-color: var(--secondary-color) !important;
+    flex: 0 0 auto;
+    display: block !important;
+}
+
+#list-page .card-body-post > .card-body-left .card-img-left {
+    max-width: 100%;
+    width: auto;
+    height: 100% !important;
+    background-color: transparent !important;
+}
+
+#list-page .card-body-post > .card-body-right {
+    display: block;
+    flex: 1;
+    width: 75%;
 }
 
 /* pagination */

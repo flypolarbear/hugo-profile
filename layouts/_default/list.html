@@ -11,25 +11,27 @@
 <div class="container pt-5" id="list-page">
     <h2 class="text-center pb-2">{{.Title}}</h2>
     <div class="row">
-        <div class="col-lg-9 col-md-6">
+        <div class="col-lg-8 col-md-6">
             <div class="row">
                 {{ range .Paginator.Pages }}
                 <div class="my-3">
                     <div class="card-columns">
                         <div class="card h-100">
-                            {{ if (not (.Site.Params.listPages.disableFeaturedImage | default false)) }}
-                            <div class="card-header">
-                                <a href="{{ .RelPermalink }}">
-                                    <img src="{{ .Params.image | default .Site.Params.listPages.defaultImage }}" class="card-img-top" alt="{{ .Title }}">
-                                </a>
-                            </div>
-                            {{ end }}
-                            <div class="card-body bg-transparent p-4 shadow-sm">
-                                <a href="{{ .RelPermalink }}" class="primary-font card-title">
-                                    <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 80 }}</h5>
-                                </a>
-                                <div class="card-text secondary-font">
-                                    <p>{{ .Summary | truncate 150}}</p>
+                            <div class="card-body-post">
+                                {{ if (not (.Site.Params.listPages.disableFeaturedImage | default false)) }}
+                                <div class="card-body-left">
+                                    <a href="{{ .RelPermalink }}">
+                                        <img src="{{ .Params.image | default .Site.Params.listPages.defaultImage }}" class="card-img-left" alt="{{ .Title }}">
+                                    </a>
+                                </div>
+                                {{ end }}
+                                <div class="card-body-right bg-transparent p-4 shadow-sm">
+                                    <a href="{{ .RelPermalink }}" class="primary-font card-title">
+                                        <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 80 }}</h5>
+                                    </a>
+                                    <div class="card-text secondary-font">
+                                        <p>{{ .Summary | truncate 120}}</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mt-auto post-footer bg-transparent py-3">
